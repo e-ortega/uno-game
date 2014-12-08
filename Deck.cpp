@@ -29,7 +29,7 @@ void Deck::reset_deck()
       }
       //size_t g = full_deck.size();
      // qDebug() <<"asdfasdf :"<< g;
-      Card next_card();
+      //Card next_card();
 }
 
 Card Deck::next_card()
