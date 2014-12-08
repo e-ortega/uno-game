@@ -7,6 +7,7 @@
 #include <vector>
 class Deck : public Card
 {
+    //http://stackoverflow.com/questions/18816320/how-to-create-a-poker-hand-class-in-c
 private:
     #define deck_size 100
     //QVector<Card*> full_deck;
