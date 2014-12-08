@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     MainWindow w;
 
     Deck deck;
-    //deck.print_deck();
+    deck.print_deck();
 
 
 

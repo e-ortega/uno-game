@@ -4,11 +4,13 @@
 #include "Card.h"
 #include <QDebug>
 #include <QVector>
+#include <vector>
 class Deck : public Card
 {
 private:
-    #define deck_size 52
-    QVector<Card*> full_deck;
+    #define deck_size 100
+    //QVector<Card*> full_deck;
+     std::vector<Card> full_deck;
     //Card full_deck[deck_size];
     int used_cards[deck_size];
 
