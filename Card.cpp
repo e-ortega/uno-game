@@ -1,5 +1,10 @@
 #include "Card.h"
 
+Card::Card()
+{
+
+}
+
 Card::Card(Color color, Symbol symbol)
     :color(color)
     ,symbol(symbol)
@@ -7,6 +12,17 @@ Card::Card(Color color, Symbol symbol)
 
 
 
+}
+
+const Card &Card::operator=(const Card *other)
+{
+   // Avoid this object to overwrite itself
+   if ( this != other )
+   {
+      color = other->color;
+      symbol = other->symbol;
+   }
+   return *this;
 }
 
 Card::Color &Card::getColor()

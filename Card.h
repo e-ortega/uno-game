@@ -35,7 +35,10 @@ public:
     Symbol symbol;
 
 public:
+    Card();
     Card(Color color, Symbol symbol);
+    const Card& operator=(const Card* other);
+
     Color& getColor();
     Symbol& getSymbol();
     QString getCard();
@@ -43,3 +46,4 @@ public:
 };
 
 #endif // CARD_H
+
