@@ -1,12 +1,10 @@
 #ifndef CARD_H
 #define CARD_H
+#include <QString>
 
 class Card
 {
 public:
-    Card();
-
-private:
     enum Color
     {
         Red,
@@ -27,12 +25,21 @@ private:
         Seven,
         Eight,
         Nine,
-        Wild,
+        //Wild,
         Reverse,
         Skip,
         Draw_2,
-        Draw_4
+        //Draw_4
     };
+    Color color;
+    Symbol symbol;
+
+public:
+    Card(Color color, Symbol symbol);
+    Color& getColor();
+    Symbol& getSymbol();
+    QString getCard();
+
 };
 
 #endif // CARD_H
