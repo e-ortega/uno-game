@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="186px" height="271px" viewBox="0 0 186 271" enable-background="new 0 0 186 271" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<rect y="1" fill="#282828" width="186" height="271"/>
+			<rect x="8" y="9" fill="#060306" width="170" height="255"/>
+			<polygon fill="#FFFFFF" points="165,52.229 165,251 53.03,251 21,219.479 21,22 133.03,22 			"/>
+		</g>
+	</g>
+	<g>
+		<path fill="#E1CD26" d="M93,59.119v59.17c-11,0-18.91,8.711-18.91,18.711H48.8H37v-12.742V48h42.96H93V59.119z"/>
+		<path fill="#C23435" d="M149,59.119V137h-38.029c0-10-7.971-18.711-17.971-18.711V48h43.65L149,59.119z"/>
+		<path fill="#333F8E" d="M93,155.168V226H48.8L37,213.938V137h37.09C74.09,147,82,155.168,93,155.168z"/>
+		<path fill="#3B7739" d="M149,148.789V226h-43.51H93v-12.062v-58.771c10,0,17.971-8.168,17.971-18.168h25.68H149V148.789z"/>
+	</g>
+	<circle fill="#060306" cx="92.53" cy="136.229" r="12.656"/>
+</g>
+</svg>
