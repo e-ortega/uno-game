@@ -33,8 +33,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>60</y>
+      <x>540</x>
+      <y>350</y>
       <width>81</width>
       <height>51</height>
      </rect>
@@ -45,6 +45,29 @@
     <property name="icon">
      <iconset resource="sources/sources.qrc">
       <normaloff>:/common/common/draw_card.svg</normaloff>:/common/common/draw_card.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>70</width>
+      <height>70</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="uno_player">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>360</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="sources/sources.qrc">
+      <normaloff>:/common/common/uno_player.svg</normaloff>:/common/common/uno_player.svg</iconset>
     </property>
     <property name="iconSize">
      <size>

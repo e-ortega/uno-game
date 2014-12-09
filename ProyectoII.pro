@@ -15,11 +15,17 @@ TEMPLATE = app
 SOURCES += main.cpp\
         MainWindow.cpp \
     Card.cpp \
-    Deck.cpp
+    Deck.cpp \
+    Player_Hand.cpp \
+    Player.cpp \
+    Uno_Game.cpp
 
 HEADERS  += MainWindow.h \
     Card.h \
-    Deck.h
+    Deck.h \
+    Player_Hand.h \
+    Player.h \
+    Uno_Game.h
 
 FORMS    += MainWindow.ui
 

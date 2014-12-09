@@ -10,8 +10,6 @@ Card::Card(Color color, Symbol symbol)
     ,symbol(symbol)
 {
 
-
-
 }
 
 const Card &Card::operator=(const Card *other)

@@ -7,9 +7,9 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-
-    Deck deck;
-    deck.print_deck();
+    w.show();
+    //Deck deck;
+    //deck.print_deck();
 
 
 

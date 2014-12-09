@@ -4,15 +4,12 @@ Deck::Deck()
 
 {
 
-    reset_deck();
+    set_deck();
 }
 
-void Deck::reset_deck()
+void Deck::set_deck()
 {
 
-    //full_deck.reserve(100);
-    //size_t f = full_deck.capacity();
-    //qDebug() <<"lenght :"<< f;
     int index = 0;
       for(int color = 0; color < 4; ++color)
       {

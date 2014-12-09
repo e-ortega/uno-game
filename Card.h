@@ -31,8 +31,11 @@ public:
         Draw_2,
         //Draw_4
     };
+
+
     Color color;
     Symbol symbol;
+
 
 public:
     Card();
@@ -44,6 +47,8 @@ public:
     QString getCard();
 
 };
+
+
 
 #endif // CARD_H
 
