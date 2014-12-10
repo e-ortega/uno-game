@@ -1,11 +1,30 @@
 #ifndef CARD_H
 #define CARD_H
 #include <QString>
-
+#include <QVector>
+#include <QDebug>
 class Card
 {
+private:
+    QString color;
+    QString symbol;
+    size_t value;
+
 public:
-    enum Color
+    Card();
+    Card( QString color, QString symbol);
+    //const Card& operator=(const Card* other);
+
+    QString getColor();
+    QString getSymbol();
+    size_t getValue();
+    void setValue();
+    //QString getCard();
+    void print_card();
+
+};
+
+   /* enum Color
     {
         Red,
         Blue,
@@ -25,29 +44,17 @@ public:
         Seven,
         Eight,
         Nine,
-        //Wild,
         Reverse,
         Skip,
         Draw_2,
+        //Wild,
         //Draw_4
     };
 
-
+private:
     Color color;
     Symbol symbol;
-
-
-public:
-    Card();
-    Card(Color color, Symbol symbol);
-    const Card& operator=(const Card* other);
-
-    Color& getColor();
-    Symbol& getSymbol();
-    QString getCard();
-
-};
-
+*/
 
 
 #endif // CARD_H

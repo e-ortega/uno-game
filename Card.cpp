@@ -1,16 +1,96 @@
 #include "Card.h"
 
+
 Card::Card()
 {
 
 }
+
+Card::Card(QString color, QString symbol)
+    :color(color)
+    ,symbol(symbol)
+{
+
+}
+
+QString Card::getColor()
+{
+    return color;
+}
+
+QString Card::getSymbol()
+{
+    return symbol;
+}
+
+size_t Card::getValue()
+{
+    return value;
+}
+
+void Card::setValue()
+{
+    //0-9: valor que indica la carta
+    //Draw Two, Reverse y Skip: 20 puntos
+    //Wild y Wild Draw Four: 50 puntos
+
+
+    if(symbol == "Zero")
+        value = 0;
+    else if( symbol == "One")
+        value = 1;
+    else if( symbol == "Two")
+        value = 2;
+    else if( symbol == "Three")
+        value = 3;
+    else if( symbol == "Four")
+        value = 4;
+    else if( symbol == "Five")
+        value = 5;
+    else if( symbol == "Six")
+        value = 6;
+    else if( symbol == "Seven")
+        value = 7;
+    else if( symbol == "Eight")
+        value = 8;
+    else if( symbol == "Nine")
+        value = 9;
+    else if( symbol == "Reverse")
+        value = 20;
+    else if( symbol == "Skip")
+        value = 20;
+    else if( symbol == "Draw_2")
+        value = 20;
+
+
+}
+
+void Card::print_card()
+{
+    qDebug() << symbol << " " << color;
+}
+
+
+/*
+Card::Card(card color, card symbol)
+    :card.color(color)
+    ,card.symbol(symbol)
+{
+
+
+
+}
+
 
 Card::Card(Color color, Symbol symbol)
     :color(color)
     ,symbol(symbol)
 {
 
+
+
 }
+
 
 const Card &Card::operator=(const Card *other)
 {
@@ -35,68 +115,69 @@ Card::Symbol &Card::getSymbol()
 
 QString Card::getCard()
 {
-    QString resultado = "";
+    QString result = "";
     Color color  = getColor();
     Symbol symbol = getSymbol();
     switch (symbol) {
         case Zero:
-            resultado += "0";
+            result += "0";
             break;
         case One:
-            resultado += "1";
+            result += "1";
             break;
         case Two:
-            resultado += "2";
+            result += "2";
             break;
         case Three:
-            resultado += "3";
+            result += "3";
             break;
         case Four:
-            resultado += "4";
+            result += "4";
             break;
         case Five:
-            resultado += "5";
+            result += "5";
             break;
         case Six:
-            resultado += "6";
+            result += "6";
             break;
         case Seven:
-            resultado += "7";
+            result += "7";
             break;
         case Eight:
-            resultado += "8";
+            result += "8";
             break;
         case Nine:
-            resultado += "9";
+            result += "9";
             break;
         case Reverse:
-            resultado += "/";
+            result += "rev";
             break;
         case Skip:
-            resultado += "->";
+            result += "->";
             break;
         case Draw_2:
-            resultado += "+2";
+            result += "+2";
             break;
     }
 
 
     switch (color) {
         case Red:
-            resultado += "Red";
+            result += "Red";
             break;
         case Blue:
-            resultado += "Red";
+            result += "Blue";
             break;
         case Green:
-            resultado += "Red";
+            result += "Green";
             break;
         case Yellow:
-            resultado += "Red";
+            result += "Yellow";
             break;
     }
 
-    return resultado;
+    return result;
 
-}
+
+}*/
 
