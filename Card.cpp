@@ -28,9 +28,41 @@ size_t Card::getValue()
     return value;
 }
 
-void Card::setValue(size_t value)
+void Card::setValue()
 {
-    this->value = value;
+    //0-9: valor que indica la carta
+    //Draw Two, Reverse y Skip: 20 puntos
+    //Wild y Wild Draw Four: 50 puntos
+
+
+    if(symbol == "Zero")
+        value = 0;
+    else if( symbol == "One")
+        value = 1;
+    else if( symbol == "Two")
+        value = 2;
+    else if( symbol == "Three")
+        value = 3;
+    else if( symbol == "Four")
+        value = 4;
+    else if( symbol == "Five")
+        value = 5;
+    else if( symbol == "Six")
+        value = 6;
+    else if( symbol == "Seven")
+        value = 7;
+    else if( symbol == "Eight")
+        value = 8;
+    else if( symbol == "Nine")
+        value = 9;
+    else if( symbol == "Reverse")
+        value = 20;
+    else if( symbol == "Skip")
+        value = 20;
+    else if( symbol == "Draw_2")
+        value = 20;
+
+
 }
 
 void Card::print_card()

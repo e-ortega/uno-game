@@ -1,7 +1,7 @@
 #include "Deck.h"
-#include <time.h>
+#include <QTime>
 Deck::Deck()
-    :deck_size( color_qty * symbol_qty  )
+    :deck_size(0)
 {
     build_deck();
     //print_deck();
@@ -9,29 +9,50 @@ Deck::Deck()
 
 void Deck::build_deck()
 {
+    called_cards.clear();
     cards.reserve(color_qty*symbol_qty);
     for(size_t i = 0; i < color_qty; ++i)
     {
         for(size_t j = 0; j < symbol_qty; ++j)
         {
            Card* card = new Card(color[i],symbol[j]);
+           card->setValue();
+           size_t s = card->getValue();
+           QString c = card->getSymbol();
+           qDebug() << "value card of "<< card->getColor() << c <<" is " << s;
            cards.push_back(card);
 
         }
     }
+    deck_size = cards.size();
+    //qDebug() << deck_size;
 
 }
 
 void Deck::print_deck()
 {
 
-    for(int i = 0; i < cards.size(); ++i)
+    for(size_t i = 0; i < deck_size; ++i)
     {
         Card* card = cards[i];
 
         card->print_card();
 
     }
+}
+
+
+Card *Deck::get_card()
+{
+    QTime time = QTime::currentTime();
+    qsrand((uint)time.msec());
+    int random_value = qrand() % deck_size;
+
+    Card* card = cards[random_value];
+    cards.remove(random_value);
+    --deck_size;
+    //qDebug() << deck_size;
+    return card;
 }
 
 

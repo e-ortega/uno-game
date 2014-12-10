@@ -18,7 +18,7 @@ public:
     QString getColor();
     QString getSymbol();
     size_t getValue();
-    void setValue(size_t value);
+    void setValue();
     //QString getCard();
     void print_card();
 
