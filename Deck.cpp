@@ -17,9 +17,9 @@ void Deck::build_deck()
         {
            Card* card = new Card(color[i],symbol[j]);
            card->setValue();
-           size_t s = card->getValue();
-           QString c = card->getSymbol();
-           qDebug() << "value card of "<< card->getColor() << c <<" is " << s;
+           //size_t s = card->getValue();
+           //QString c = card->getSymbol();
+           //qDebug() << "value card of "<< card->getColor() << c <<" is " << s;
            cards.push_back(card);
 
         }

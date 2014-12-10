@@ -4,7 +4,9 @@
 class Player
 {
 public:
+    QString id;
     int score;
+
     Player_Hand hand;
 
     Player();
