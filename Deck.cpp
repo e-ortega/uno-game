@@ -1,25 +1,56 @@
 #include "Deck.h"
 #include <time.h>
 Deck::Deck()
-
+    :deck_size( color_qty * symbol_qty  )
 {
-
-    set_deck();
+    build_deck();
+    //print_deck();
 }
 
-void Deck::set_deck()
+void Deck::build_deck()
+{
+    cards.reserve(color_qty*symbol_qty);
+    for(size_t i = 0; i < color_qty; ++i)
+    {
+        for(size_t j = 0; j < symbol_qty; ++j)
+        {
+           Card* card = new Card(color[i],symbol[j]);
+           cards.push_back(card);
+
+        }
+    }
+
+}
+
+void Deck::print_deck()
+{
+
+    for(int i = 0; i < cards.size(); ++i)
+    {
+        Card* card = cards[i];
+
+        card->print_card();
+
+    }
+}
+
+
+/*
+{
+    //reset_deck();
+}
+
+void Deck::reset_deck()
 {
 
     int index = 0;
-      for(int color = 0; color < 4; ++color)
+    Card current;
+
+    for(int color = 0; color < 4; ++color)
       {
         for(int symbol = 0; symbol < 13; ++symbol)
         {
-          //Card(Color color, Symbol symbol);
-          //  suit			rank
-          // Card* card =  new Card( (Color) color, (Symbol) symbol);
-          //full_deck[index]  = card;
-           full_deck[index]  = Card( (Color) color, (Symbol) symbol);
+            full_deck[index]  = Card(color, symbol);
            used_cards[index] = 0;
           index++;
         }
@@ -52,6 +83,8 @@ void Deck::print_deck()
         QString test = card.getCard();
         qDebug() << test;
     }
-}
+
+
+}*/
 
 

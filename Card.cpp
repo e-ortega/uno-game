@@ -1,16 +1,64 @@
 #include "Card.h"
 
+
 Card::Card()
 {
 
 }
+
+Card::Card(QString color, QString symbol)
+    :color(color)
+    ,symbol(symbol)
+{
+
+}
+
+QString Card::getColor()
+{
+    return color;
+}
+
+QString Card::getSymbol()
+{
+    return symbol;
+}
+
+size_t Card::getValue()
+{
+    return value;
+}
+
+void Card::setValue(size_t value)
+{
+    this->value = value;
+}
+
+void Card::print_card()
+{
+    qDebug() << symbol << " " << color;
+}
+
+
+/*
+Card::Card(card color, card symbol)
+    :card.color(color)
+    ,card.symbol(symbol)
+{
+
+
+
+}
+
 
 Card::Card(Color color, Symbol symbol)
     :color(color)
     ,symbol(symbol)
 {
 
+
+
 }
+
 
 const Card &Card::operator=(const Card *other)
 {
@@ -35,68 +83,69 @@ Card::Symbol &Card::getSymbol()
 
 QString Card::getCard()
 {
-    QString resultado = "";
+    QString result = "";
     Color color  = getColor();
     Symbol symbol = getSymbol();
     switch (symbol) {
         case Zero:
-            resultado += "0";
+            result += "0";
             break;
         case One:
-            resultado += "1";
+            result += "1";
             break;
         case Two:
-            resultado += "2";
+            result += "2";
             break;
         case Three:
-            resultado += "3";
+            result += "3";
             break;
         case Four:
-            resultado += "4";
+            result += "4";
             break;
         case Five:
-            resultado += "5";
+            result += "5";
             break;
         case Six:
-            resultado += "6";
+            result += "6";
             break;
         case Seven:
-            resultado += "7";
+            result += "7";
             break;
         case Eight:
-            resultado += "8";
+            result += "8";
             break;
         case Nine:
-            resultado += "9";
+            result += "9";
             break;
         case Reverse:
-            resultado += "/";
+            result += "rev";
             break;
         case Skip:
-            resultado += "->";
+            result += "->";
             break;
         case Draw_2:
-            resultado += "+2";
+            result += "+2";
             break;
     }
 
 
     switch (color) {
         case Red:
-            resultado += "Red";
+            result += "Red";
             break;
         case Blue:
-            resultado += "Red";
+            result += "Blue";
             break;
         case Green:
-            resultado += "Red";
+            result += "Green";
             break;
         case Yellow:
-            resultado += "Red";
+            result += "Yellow";
             break;
     }
 
-    return resultado;
+    return result;
 
-}
+
+}*/
 
